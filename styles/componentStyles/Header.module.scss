@@ -3,6 +3,10 @@
 .header {
   @include container();
 
+  a {
+    text-decoration: none;
+  }
+
   h2 {
     @include logo-text();
   }
