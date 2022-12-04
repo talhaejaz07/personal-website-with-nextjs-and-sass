@@ -1,13 +1,13 @@
-import Head from "next/head";
+import { HeadComponent } from "../components/";
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Personal Website</title>
-        <meta name="description" content="My home on internet" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadComponent
+        title="Talha Ejaz | A resident of internet"
+        description="My corner of internet to rant. I own this place to share my thoughts that might be too hot for social media or thoughts I want to be out there, not caring about their reach."
+      />
+
       <h1>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et error quia
         consectetur cum. Omnis sunt nulla fugit laudantium non, eum tempore

@@ -1,0 +1,6 @@
+@use "./spacings" as *;
+
+@mixin container() {
+  margin-inline: auto;
+  width: min(1200px, 100vw - (2 * $size-medium));
+}

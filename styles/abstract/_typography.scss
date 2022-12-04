@@ -1,0 +1,116 @@
+@use "./colors.scss" as *;
+@use "./breakpoints.scss" as *;
+@use "./spacings" as *;
+
+// Fonts
+
+$fancy-font: "Pacifico", cursive;
+$heading-font: "Open Sans", sans-serif;
+$text-font: "PT Sans", sans-serif;
+
+// Headings
+
+@mixin headingBasics($color) {
+  font-family: $heading-font;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $color;
+}
+
+@mixin heading-large($color: $secondary-color-05) {
+  @include headingBasics($color);
+
+  @include for-desktop-only {
+    font-size: 48px;
+  }
+
+  @include for-tablet-only {
+    font-size: 44px;
+  }
+
+  @include for-phone-only {
+    font-size: 40px;
+  }
+}
+
+@mixin heading-medium($color: $secondary-color-05) {
+  @include headingBasics($color);
+
+  @include for-desktop-only {
+    font-size: 36px;
+  }
+
+  @include for-tablet-only {
+    font-size: 32px;
+  }
+
+  @include for-phone-only {
+    font-size: 28px;
+  }
+}
+
+@mixin heading-small($color: $secondary-color-05) {
+  @include headingBasics($color);
+
+  @include for-desktop-only {
+    font-size: 28px;
+  }
+
+  @include for-tablet-only {
+    font-size: 24px;
+  }
+
+  @include for-phone-only {
+    font-size: 22px;
+  }
+}
+
+// Body Text
+
+@mixin body-text($color: $tertiary-color-05) {
+  font-family: $text-font;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color;
+
+  font-size: 20px;
+
+  @include for-phone-only {
+    font-size: 18px;
+  }
+}
+
+// Exotic Texts
+
+@mixin nav-text($color: $tertiary-color-05) {
+  font-family: $heading-font;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $color;
+
+  font-size: 20px;
+
+  @include for-phone-only {
+    font-size: 18px;
+  }
+}
+
+@mixin logo-text($color: $secondary-color-05) {
+  font-family: $fancy-font;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: $size-tiny;
+  color: $color;
+
+  @include for-desktop-only {
+    font-size: 48px;
+  }
+
+  @include for-tablet-only {
+    font-size: 44px;
+  }
+
+  @include for-phone-only {
+    font-size: 40px;
+  }
+}

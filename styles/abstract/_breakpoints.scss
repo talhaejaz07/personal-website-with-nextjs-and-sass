@@ -1,0 +1,32 @@
+$phone-cutoff: 550px;
+$tablet-cutoff: 850px;
+
+@mixin for-desktop-only {
+  @media (min-width: $tablet-cutoff) {
+    @content;
+  }
+}
+
+@mixin for-tablet-only {
+  @media (max-width: $tablet-cutoff) and (min-width: $phone-cutoff) {
+    @content;
+  }
+}
+
+@mixin for-phone-only {
+  @media (max-width: $phone-cutoff) {
+    @content;
+  }
+}
+
+@mixin for-larger-than-phone {
+  @media (min-width: $phone-cutoff) {
+    @content;
+  }
+}
+
+@mixin for-smaller-than-desktop {
+  @media (max-width: $tablet-cutoff) {
+    @content;
+  }
+}

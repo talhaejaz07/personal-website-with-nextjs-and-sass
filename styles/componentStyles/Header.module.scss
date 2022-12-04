@@ -1,0 +1,13 @@
+@use "../abstract/" as *;
+
+.header {
+  @include container();
+
+  h2 {
+    @include logo-text();
+  }
+
+  span {
+    color: $secondary-color-50;
+  }
+}
