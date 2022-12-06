@@ -1,7 +1,17 @@
 @use "../abstract/" as *;
 
 .header {
+  padding-top: $size-small;
   @include container();
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include for-phone-only {
+    flex-direction: column;
+    gap: $size-small;
+  }
 
   a {
     text-decoration: none;
@@ -13,5 +23,38 @@
 
   span {
     color: $secondary-color-50;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    gap: $size-medium;
+
+    background-color: rgba($tertiary-color-95, 0.25);
+    padding: $size-medium;
+    border-radius: $size-small;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    @include nav-text();
+    position: relative;
+  }
+
+  p:hover {
+    color: $secondary-color-50;
+  }
+
+  p:hover::after {
+    content: "";
+    background-color: rgba($tertiary-color-30, 0.25);
+    height: $size-tiny;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1 * $size-medium;
   }
 }

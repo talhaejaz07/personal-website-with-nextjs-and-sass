@@ -88,10 +88,10 @@ $text-font: "PT Sans", sans-serif;
   line-height: 1.5;
   color: $color;
 
-  font-size: 20px;
+  font-size: 16px;
 
   @include for-phone-only {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 

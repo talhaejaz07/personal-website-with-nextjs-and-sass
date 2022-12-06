@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { links } from "../data/headerData";
+
 import styles from "../styles/componentStyles/Header.module.scss";
 
 export const Header = () => {
@@ -10,6 +12,18 @@ export const Header = () => {
           <span>T</span>alha <span>E</span>jaz
         </h2>
       </Link>
+
+      <ul>
+        {links.map((link, index) => {
+          return (
+            <li key={index}>
+              <Link href={link.to}>
+                <p>{link.name}</p>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </header>
   );
 };
