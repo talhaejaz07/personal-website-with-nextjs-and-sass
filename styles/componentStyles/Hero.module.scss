@@ -4,9 +4,49 @@
   @include container();
 
   display: grid;
+  align-items: center;
+  gap: $size-medium;
   grid-template-columns: 1fr;
 
+  @include for-larger-than-phone {
+    grid-template-columns: 50% 50%;
+  }
+
   img {
-    width: 100%;
+    width: calc(100vw - 32px);
+    height: calc((100vw - 32px) * 1.33);
+
+    grid-row: 1/2;
+
+    @include for-larger-than-phone {
+      width: min((50vw - 24px), (600px - 24px));
+      height: calc(min((50vw - 24px), (600px - 24px)) * 1.33);
+
+      grid-column: 2/3;
+    }
+  }
+
+  h3 {
+    @include heading-small($tertiary-color-20);
+  }
+
+  h1 {
+    @include heading-medium();
+  }
+
+  span {
+    color: $secondary-color-50;
+  }
+
+  p {
+    @include body-text();
+  }
+
+  h1,
+  h3,
+  p {
+    @include for-phone-only {
+      text-align: center;
+    }
   }
 }

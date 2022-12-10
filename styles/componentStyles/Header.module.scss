@@ -2,6 +2,7 @@
 
 .header {
   padding-top: $size-small;
+  padding-bottom: $size-small;
   @include container();
 
   display: flex;
