@@ -19,7 +19,7 @@ export const Hero = () => {
       <Image
         src={portrait}
         alt="Portrait"
-        sizes="(max-width: 550px) calc(100vw - 32px), min(calc(50vw - 24px), (600px - 24px))"
+        sizes="(max-width: 550px) calc(100vw - 32px), min(calc(50vw - 16px), (600px - 16px))"
       />
     </section>
   );

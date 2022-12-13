@@ -19,8 +19,8 @@
     grid-row: 1/2;
 
     @include for-larger-than-phone {
-      width: min((50vw - 24px), (600px - 24px));
-      height: calc(min((50vw - 24px), (600px - 24px)) * 1.33);
+      width: min((50vw - 16px), (600px - 16px));
+      height: calc(min((50vw - 16px), (600px - 16px)) * 1.33);
 
       grid-column: 2/3;
     }
